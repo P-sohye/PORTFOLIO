@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Analysis Project-2</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family: "Roboto";
+                background-color: rgba(247, 243, 239, 1);
+                color: rgba(17, 35, 15, 1);
+            }
+            .background {
+                width: 100%;
+                bottom: 3vw;
+                padding-bottom: 10vh; /* 푸터의 공간을 확보하기 위해 아래쪽에 패딩 추가 */
+                height: 100%;
+                background: rgba(247, 243, 239, 1);
+                opacity: 1;
+                position: relative;
+                overflow-x: hidden; /* 양옆 스크롤 제거 */
+                overflow-y: auto; /* 세로 스크롤 허용 */
+            }
+
+            .title {
+                width: 100%;
+                color: rgba(17, 35, 15, 1);
+                position: absolute;
+                top: 9vw;
+                text-align: center;
+                font-family: "Roboto";
+                font-weight: bolder;
+                font-size: 3.5vw;
+                opacity: 1;
+            }
+
+            .title_img {
+                width: 100%;
+                height: 25vw;
+                background: url(images/analysis_2.png);
+                filter: grayscale(50%);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                opacity: 1;
+                position: absolute;
+                top: 15vw;
+                overflow: hidden;
+            }
+
+            #header-placeholder {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 100;
+            }
+
+            .intro {
+                color: rgba(17, 35, 15, 1);
+                position: absolute;
+                top: 42vw;
+                left: 5vw;
+                font-family: "Roboto";
+                font-weight: bolder;
+                font-size: 4vw;
+                opacity: 1;
+                text-align: left;
+            }
+
+            .intro_in {
+                width: 90vw;
+                color: rgba(0, 0, 0, 1);
+                position: absolute;
+                top: 48vw;
+                left: 5vw;
+                font-family: "Roboto";
+                font-weight: medium;
+                font-size: 1.4vw;
+                opacity: 1;
+                text-align: left;
+            }
+
+            .design {
+                color: rgba(17, 35, 15, 1);
+                position: absolute;
+                top: 54vw;
+                left: 5vw;
+                font-family: "Roboto";
+                font-weight: bolder;
+                font-size: 4vw;
+                opacity: 1;
+                text-align: left;
+            }
+
+            .design-box {
+                display: flex;
+                gap: 1vw;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                margin: 5vw;
+                margin-top: 60vw;
+            }
+
+            .design-card {
+                flex: 1 1 calc(20% - 1vw); /* 카드 크기 조정 */
+                background-color: #ccc;
+                border-radius: 19px;
+                text-align: center;
+                padding: 1vw;
+                font-family: "Roboto";
+                font-weight: bolder;
+                font-size: 1.4vw;
+                /* display: flex; */
+                /* flex-direction: column;  */
+                /* justify-content: flex-start;  */
+            }
+            .text-box {
+                display: flex;
+                gap: 1vw;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                margin: 5vw;
+                margin-top: -7vw;
+            }
+
+            .text-card {
+                flex: 1 1 calc(20% - 1vw); /* 카드 크기 조정 */
+                border-radius: 15px;
+                padding: 2.3vw;
+
+                font-family: "Roboto";
+                font-weight: normal;
+                font-size: 1.2vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
+            .card-content {
+                margin-top: 2vw; /* 카드 내용과 제목 사이의 간격 */
+                font-size: 1.2vw;
+                font-weight: normal;
+                color: rgba(0, 0, 0, 0.8);
+                text-align: left;
+                /* display: flex; */
+                /* flex-direction: column; */
+                justify-content: flex-start;
+            }
+
+            .code {
+                width: 967px;
+                color: rgba(17, 35, 15, 1);
+                position: absolute;
+                top: 81vw;
+                left: 5vw;
+                font-family: "Roboto";
+                font-weight: bolder;
+                font-size: 4vw;
+                opacity: 1;
+                text-align: left;
+            }
+
+            .result {
+                width: 967px;
+                color: rgba(17, 35, 15, 1);
+                position: absolute;
+                top: 100vw;
+                left: 5vw;
+                font-family: "Roboto";
+                font-weight: bolder;
+                font-size: 4vw;
+                opacity: 1;
+                text-align: left;
+            }
+
+            .design-box2 {
+                /* gap: 6vw; */
+                justify-content: space-evenly;
+                margin: 5vw;
+                margin-top: 32vw;
+                max-width: 15vw;
+            }
+
+            .design-card2 {
+                /* flex: 1 1 calc(20% - 1vw); */
+                background-color: rgba(217, 217, 217, 1);
+                border-radius: 15px;
+                text-align: center;
+                padding: 1vw;
+                font-family: "Roboto";
+                font-weight: bold;
+                font-size: 1.4vw;
+                display: flex;
+                flex-direction: column; /* 수직 정렬 */
+                justify-content: flex-start; /* 카드 내용 상단 정렬 */
+            }
+
+            .result_img {
+                width: 45vw;
+                top: 90vw;
+                left: 46vw;
+                margin-left: 4vw;
+                background: url(images/kriso.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-size: 100%;
+                opacity: 1;
+                position: relative;
+            }
+            #header-placeholder {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 100;
+            }
+            #tailer-placeholder {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                z-index: 100;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="header-placeholder"></div>
+        <div class="background">
+            <span class="title">스마트 스타디움 주차 서비스 구축</span>
+            <div class="title_img"></div>
+            <span class="intro">Introduction</span>
+            <p class="intro_in"></p>
+            <span class="design">Design & Implementation</span>
+            <div class="design-box">
+                <div class="design-card">
+                    <div class="card-title">설계 개요</div>
+                </div>
+                <div class="design-card">데이터 수집</div>
+                <div class="design-card">데이터 분석</div>
+                <div class="design-card">사용 기술</div>
+            </div>
+
+            <span class="code">Code & Technical Details</span>
+
+            <span class="result">Result</span>
+        </div>
+
+        <script>
+            // 헤더 로드 후 active 클래스 추가 코드 실행
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-placeholder").innerHTML =
+                        data;
+
+                    // 헤더 로드 완료 후 현재 페이지에 따라 active 클래스 설정
+                    const currentPage = window.location.pathname
+                        .split("/")
+                        .pop();
+
+                    const links = {
+                        "home.html": "home-link",
+                        "about_me.html": "about-me-link",
+                        "main_project.html": "project-link",
+                        "contact.html": "contact-link",
+                    };
+
+                    // 현재 페이지와 일치하는 링크에 active 클래스 추가
+                    for (let page in links) {
+                        const link = document.getElementById(links[page]);
+                        if (link && currentPage === page) {
+                            link.classList.add("a.active");
+                        }
+                    }
+                });
+        </script>
+        <div id="tail-placeholder"></div>
+        <script>
+            fetch("tail.html")
+                .then(response => response.text())
+                .then(data => {
+                    const tailPlaceholder =
+                        document.getElementById("tail-placeholder");
+                    tailPlaceholder.innerHTML = data;
+
+                    const currentPage = window.location.pathname
+                        .split("/")
+                        .pop();
+
+                    if (currentPage === "project_2.html") {
+                        // ✅ 푸터 전체 색상을 흰색으로 변경
+                        tailPlaceholder.style.color = "#ccc";
+
+                        // ✅ "Analysis Project_1"의 색상을 흰색으로 변경
+                        const v1Element = tailPlaceholder.querySelector(".v2");
+                        if (v1Element) {
+                            v1Element.style.color = "#ccc";
+                        }
+                    }
+                });
+        </script>
+    </body>
+</html>

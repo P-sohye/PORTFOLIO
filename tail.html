@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TAIL</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,900&display=swap"
+            rel="stylesheet" />
+
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                /* height: 100%; */
+                overflow: visible;
+                font-family: "Roboto", serif;
+                background: rgba(247, 243, 239, 1);
+            }
+
+            footer {
+                position: fixed;
+                bottom: 0;
+                z-index: 100;
+                background-color: rgba(247, 243, 239, 1);
+                width: 100%;
+            }
+
+            .back {
+                width: 100%;
+                padding: 1vw;
+                background: rgba(247, 243, 239, 1);
+                position: absolute;
+                bottom: 0;
+                left: 0px;
+                overflow: hidden;
+            }
+
+            .v1,
+            .v2,
+            .v3,
+            .v4,
+            .v5,
+            .v6 {
+                width: 0vw;
+                display: inline-block;
+                color: rgba(17, 35, 15, 1);
+                position: absolute;
+                font-size: 0.8vw;
+                font-family: "roboto";
+                font-weight: bold;
+                top: 0vw;
+                opacity: 1;
+                text-align: left;
+                transition: color 0.3s ease;
+            }
+            .v6::after {
+                content: "";
+                position: absolute;
+                left: 0%;
+                top: 1vw;
+                width: 100vw; /* Adjust the length of the line */
+                height: 0.2vw; /* Line thickness */
+                background-color: #76a37e;
+            }
+
+            /* 링크 마우스 오버 시 글씨 흰색으로 변경 */
+            .back a:hover span {
+                color: white;
+            }
+
+            /* 클릭된 상태를 나타내는 active 클래스 */
+            /* .back a.active {
+                color: white;
+            } */
+            .v1 {
+                left: 4vw;
+            }
+            .v2 {
+                left: 12vw;
+            }
+            .v3 {
+                left: 20vw;
+            }
+            .v4 {
+                left: 28vw;
+            }
+            .v5 {
+                left: 37vw;
+            }
+            .v6 {
+                left: 47vw;
+            }
+        </style>
+    </head>
+
+    <body>
+        <footer>
+            <div class="back">
+                <a href="project_1.html" class="project-link"
+                    ><span class="v1">Analysis Project_1</span></a
+                >
+                <a href="project_2.html" class="project-link"
+                    ><span class="v2">Analysis Project_2</span></a
+                >
+                <a href="project_3.html" class="project-link"
+                    ><span class="v3">Analysis Project_3</span></a
+                >
+                <a href="project_4.html" class="project-link"
+                    ><span class="v4">Development Project_1</span></a
+                >
+                <a href="project_5.html" class="project-link"
+                    ><span class="v5">Development Project_2</span></a
+                >
+                <span class="v6"></span>
+            </div>
+        </footer>
+    </body>
+</html>

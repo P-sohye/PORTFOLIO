@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HEADER</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,900&display=swap"
+            rel="stylesheet" />
+
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                overflow: visible;
+                font-family: "Roboto", serif;
+                background: rgba(247, 243, 239, 1);
+            }
+
+            header {
+                position: sticky;
+                top: 0;
+                z-index: 100;
+                background-color: rgba(247, 243, 239, 1);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1vw 4vw;
+                width: 100%;
+            }
+
+            .logo {
+                font-size: 1.8vw;
+                font-weight: bold;
+                color: #76a37e;
+            }
+
+            nav ul {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav ul li {
+                margin: 0px 18px;
+                position: relative;
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                color: black;
+                font-size: 1.4vw;
+                transition:
+                    color 0.3s,
+                    font-weight 0.3s;
+            }
+
+            nav ul li a.active,
+            nav ul li a:hover {
+                color: rgb(180, 153, 153);
+                font-weight: bold;
+            }
+
+            .dropdown {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0; /* 드롭다운을 왼쪽 정렬 */
+                background-color: rgba(180, 153, 153, 0.9);
+                padding: 0vw, 0vw;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 10;
+                border-radius: 5px;
+                width: 13vw;
+            }
+
+            .dropdown li {
+                margin: 0;
+            }
+
+            .dropdown li a {
+                padding: 1vw;
+                display: block;
+                color: white;
+                font-size: 1vw;
+                font-family: "Roboto";
+                font-weight: regular;
+                transition: background-color 0.3s;
+                border-radius: 3px;
+                text-align: left;
+            }
+            .dropdown li a:hover {
+                background-color: #4c704c;
+                font-weight: bold;
+            }
+
+            nav ul li:hover .dropdown {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">PORTFOLIO</div>
+            <nav>
+                <ul>
+                    <li><a href="home.html" id="home-link">HOME</a></li>
+                    <li>
+                        <a href="about_me.html" id="about-me-link">ABOUT ME</a>
+                    </li>
+                    <li>
+                        <a href="main_project.html" id="project-link"
+                            >PROJECT</a
+                        >
+                        <ul class="dropdown">
+                            <li>
+                                <a href="project_1.html"
+                                    >Analysis Project - 1</a
+                                >
+                            </li>
+                            <li>
+                                <a href="project_2.html"
+                                    >Analysis Project - 2</a
+                                >
+                            </li>
+                            <li>
+                                <a href="project_3.html"
+                                    >Analysis Project - 3</a
+                                >
+                            </li>
+                            <li>
+                                <a href="project_4.html"
+                                    >Development Project - 1</a
+                                >
+                            </li>
+                            <li>
+                                <a href="project_5.html"
+                                    >Development Project - 2</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <li>
+                        <a href="contact.html" id="contact-link">CONTACT</a>
+                    </li> -->
+                </ul>
+            </nav>
+        </header>
+    </body>
+</html>

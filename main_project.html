@@ -1,0 +1,378 @@
+<!doctype html>
+<html>
+    <head>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+            rel="stylesheet" />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,900&display=swap"
+            rel="stylesheet" />
+        <title>PROJECT</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-size: 1.4vw; /* 화면 너비에 따라 글씨 크기 조정 */
+                font-family: "Roboto";
+                scroll-behavior: smooth;
+            }
+
+            .background {
+                opacity: 1;
+                min-width: 100%;
+                height: 100%;
+                bottom: 3vw;
+                background: rgba(247, 243, 239, 1);
+                position: relative;
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+            .main_title {
+                width: 39vw;
+                color: rgba(17, 35, 15, 1);
+                position: absolute;
+                top: 9vw;
+                left: 5vw;
+                font-family: "Roboto";
+                font-weight: 900;
+                font-size: 7vw;
+                opacity: 1;
+                text-align: left;
+            }
+            .main_title::after {
+                content: ""; /* 내용 없이 가상 요소를 생성 */
+                position: absolute; /* 위치를 절대값으로 설정 */
+                top: 4.5vw; /* 글자의 높이에 맞춰 선을 위치시킴 */
+                left: 100%; /* 글자의 오른쪽 끝에 선을 위치시킴 */
+                width: 100vw; /* 화면 너비만큼 선을 그리기 */
+                height: 0.8vw; /* 선의 두께 */
+                background-color: #76a37e; /* 선의 색상 */
+            }
+            .sub_analysis {
+                width: 60vw;
+                color: rgba(17, 35, 15, 1);
+                position: absolute;
+                top: 22vw;
+                left: 5vw;
+                font-family: "Roboto";
+                font-weight: 900;
+                font-size: 3vw;
+                opacity: 1;
+                text-align: left;
+            }
+            .sub_development {
+                width: 675px;
+                color: rgba(17, 35, 15, 1);
+                position: absolute;
+                top: 56vw;
+                left: 5vw;
+                font-family: "Roboto";
+                font-weight: 900;
+                font-size: 3vw;
+                opacity: 1;
+                text-align: left;
+            }
+            .development_1 {
+                width: 26vw;
+                color: rgba(0, 0, 0, 1);
+                position: absolute;
+                top: 81vw;
+                left: 5vw;
+                font-family: "Roboto";
+                font-weight: Regular;
+                font-size: 1.4vw;
+                opacity: 1;
+                text-align: left;
+            }
+            .development_img1 {
+                width: 26vw;
+                height: 13vw;
+                background: url("/images/development_1.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                opacity: 1;
+                position: absolute;
+                top: 66vw;
+                left: 5vw;
+                overflow: hidden;
+            }
+
+            .development_2 {
+                width: 26vw;
+                color: rgba(0, 0, 0, 1);
+                position: absolute;
+                top: 81vw;
+                left: 36vw;
+                font-family: "Roboto";
+                font-weight: Regular;
+                font-size: 1.4vw;
+                opacity: 1;
+                text-align: left;
+            }
+
+            .development_img2 {
+                width: 26vw;
+                height: 13vw;
+                background: url("./images/development_2.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                opacity: 1;
+                position: absolute;
+                top: 66vw;
+                left: 36vw;
+                overflow: hidden;
+            }
+            .analysis_1 {
+                width: 25.5vw;
+                color: rgba(0, 0, 0, 1);
+                position: absolute;
+                top: 47vw;
+                left: 5vw;
+                font-family: "Roboto";
+                font-weight: regular;
+                font-size: 1.4vw;
+                opacity: 1;
+                text-align: left;
+            }
+
+            .analysis_img1 {
+                width: 26vw;
+                height: 13vw;
+                background: url("./images/analysis_1.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                opacity: 1;
+                position: absolute;
+                top: 32vw;
+                left: 5vw;
+                overflow: hidden;
+            }
+
+            .analysis_2 {
+                width: 25.5vw;
+                color: rgba(0, 0, 0, 1);
+                position: absolute;
+                top: 47vw;
+                left: 36vw;
+                font-family: "Roboto";
+                font-weight: Regular;
+                font-size: 1.4vw;
+                opacity: 1;
+                text-align: left;
+            }
+            .analysis_img2 {
+                width: 26vw;
+                height: 13vw;
+                background: url("/images/analysis_2.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                opacity: 1;
+                position: absolute;
+                top: 32vw;
+                left: 36vw;
+                overflow: hidden;
+            }
+
+            .analysis_3 {
+                width: 25.5vw;
+                color: rgba(0, 0, 0, 1);
+                position: absolute;
+                top: 47vw;
+                left: 67vw;
+                font-family: "Roboto";
+                font-weight: Regular;
+                font-size: 1.4vw;
+                opacity: 1;
+                text-align: left;
+            }
+            .analysis_img3 {
+                width: 26vw;
+                height: 13vw;
+                background: url("./images/analysis_3.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                opacity: 1;
+                position: absolute;
+                top: 32vw;
+                left: 67vw;
+                overflow: hidden;
+            }
+
+            /* 모든 이미지에 hover 효과 적용 */
+            .img-hover {
+                transition: 0.3s; /* 부드러운 전환 효과 */
+            }
+
+            .img-hover:hover {
+                filter: grayscale(100%); /* 마우스를 올리면 회색으로 변환 */
+            }
+            #header-placeholder {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 100;
+            }
+            #tail-placeholder {
+                scroll-margin-bottom: 5vh; /* Tail과 본문 사이 여백 추가 */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="background">
+            <span class="main_title">PROJECT</span>
+
+            <a href="project_4.html">
+                <div class="development_img1 img-hover"></div>
+                <div class="development_1">
+                    소비자 선호도 기반 F&B 큐레이팅 커머스 웹 프로젝트<br />
+                    <span
+                        style="
+                            font-size: 1.2vw;
+                            font-weight: bold;
+                            color: rgb(180, 153, 153);
+                        ">
+                        Read More ->
+                    </span>
+                </div>
+            </a>
+
+            <a href="dproject_5.html">
+                <div class="development_img2 img-hover"></div>
+                <div class="development_2">
+                    사용자 라이프스타일 영상 큐레이션 서비스 프로젝트<br />
+                    <span
+                        style="
+                            font-size: 1.2vw;
+                            font-weight: bold;
+                            color: rgb(180, 153, 153);
+                        ">
+                        Read More ->
+                    </span>
+                </div>
+            </a>
+            <a href="project_1.html">
+                <div class="analysis_img1 img-hover"></div>
+                <div class="analysis_1 text-hover">
+                    해양 환경 정보 공유 웹사이트의 데이터 통계 분석 및 비교<br />
+                    <span
+                        style="
+                            font-size: 1.2vw;
+                            font-weight: bold;
+                            color: rgb(180, 153, 153);
+                        ">
+                        Read More ->
+                    </span>
+                </div>
+            </a>
+            <a href="project_2.html">
+                <div class="analysis_img2 img-hover"></div>
+                <div class="analysis_2">
+                    스마트 스타디움 주차 서비스 구축<br />
+                    <span
+                        style="
+                            font-size: 1.2vw;
+                            font-weight: bold;
+                            color: rgb(180, 153, 153);
+                        ">
+                        Read More ->
+                    </span>
+                </div>
+            </a>
+
+            <a href="project_3.html">
+                <div class="analysis_img3 img-hover"></div>
+                <div class="analysis_3">
+                    서울시 잠재적 장기요양 판정자 예측을 통한 최적 입지 선정<br />
+                    <span
+                        style="
+                            font-size: 1.2vw;
+                            font-weight: bold;
+                            color: rgb(180, 153, 153);
+                        ">
+                        Read More ->
+                    </span>
+                </div>
+            </a>
+            <br />
+            <br />
+            <br />
+
+            <div class="v57_7"></div>
+            <span class="sub_analysis"
+                >Analysis<br />
+                Project</span
+            >
+            <span class="sub_development">Development <br />Project</span>
+        </div>
+        <div id="header-placeholder"></div>
+
+        <script>
+            // 헤더 로드 후 active 클래스 추가 코드 실행
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-placeholder").innerHTML =
+                        data;
+
+                    // 헤더 로드 완료 후 현재 페이지에 따라 active 클래스 설정
+                    const currentPage = window.location.pathname
+                        .split("/")
+                        .pop();
+
+                    const links = {
+                        "home.html": "home-link",
+                        "about_me.html": "about-me-link",
+                        "main_project.html": "project-link",
+                        "contact.html": "contact-link",
+                    };
+
+                    // 현재 페이지와 일치하는 링크에 active 클래스 추가
+                    for (let page in links) {
+                        const link = document.getElementById(links[page]);
+                        if (link && currentPage === page) {
+                            link.classList.add("active");
+                        }
+                    }
+                });
+        </script>
+
+        <div id="tail-placeholder"></div>
+
+        <script>
+            fetch("tail.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("tail-placeholder").innerHTML =
+                        data;
+
+                    const currentPage = window.location.pathname
+                        .split("/")
+                        .pop();
+
+                    const links = {
+                        "project_1.html": "project_1-link",
+                        "project_2.html": "project_2-link",
+                        "project_3.html": "project_3-link",
+                        "project_4.html": "project_4-link",
+                        "project_5.html": "project_5-link",
+                    };
+
+                    // 현재 페이지와 일치하는 링크에 active 클래스 추가
+                    for (let page in links) {
+                        const link = document.getElementById(links[page]);
+                        if (link && currentPage === page) {
+                            link.classList.add("active");
+                        }
+                    }
+                });
+        </script>
+    </body>
+</html>

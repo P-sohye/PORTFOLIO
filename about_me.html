@@ -1,0 +1,429 @@
+<!doctype html>
+<html>
+    <head>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+            rel="stylesheet" />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,900&display=swap"
+            rel="stylesheet" />
+        <title>ABOUT ME</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-size: 1.4vw; /* 화면 너비에 따라 글씨 크기 조정 */
+                font-family: "Roboto";
+                scroll-behavior: smooth;
+            }
+            .background {
+                width: 100%;
+                height: 100vh; /* 뷰포트 높이에 맞춤 */
+                background: rgba(247, 243, 239, 1);
+                position: absolute;
+                overflow-x: hidden; /* 양옆 스크롤 제거 */
+                overflow-y: auto; /* 세로 스크롤 허용 */
+            }
+
+            .about_ME {
+                width: 39vw;
+                color: rgba(17, 35, 15, 1);
+                position: absolute;
+                top: 9vw;
+                left: 5vw;
+                font-family: "Roboto";
+                font-weight: 900;
+                font-size: 7vw;
+                opacity: 1;
+                text-align: left;
+            }
+            .about_ME::after {
+                content: ""; /* 내용 없이 가상 요소를 생성 */
+                position: absolute; /* 위치를 절대값으로 설정 */
+                top: 4.5vw; /* 글자의 높이에 맞춰 선을 위치시킴 */
+                left: 100%; /* 글자의 오른쪽 끝에 선을 위치시킴 */
+                width: 100vw; /* 화면 너비만큼 선을 그리기 */
+                height: 0.8vw; /* 선의 두께 */
+                background-color: #76a37e; /* 선의 색상 */
+            }
+            .circle_sohye {
+                width: 23vw;
+                height: 22vw;
+                background: rgb(180, 153, 153);
+                opacity: 1;
+                position: absolute;
+                top: 22vw;
+                left: 6vw;
+                border-radius: 50%;
+                z-index: 0; /* 원이 이미지보다 뒤로 가도록 설정 */
+                overflow: hidden;
+            }
+            .sohye_img {
+                width: 26vw;
+                height: 22vw;
+                background: url("./images/about_sohye.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                opacity: 1;
+                position: absolute;
+                top: 22vw;
+                left: 4.5vw;
+                z-index: 1; /*보다 앞에 오도록 설정*/
+                overflow: hidden; /*이미지가 원을 벗어나지 않도록 함*/
+            }
+
+            .information_box {
+                width: 13vw;
+                height: 13vw;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                opacity: 1;
+                position: absolute;
+                top: 42vw;
+                left: 10.5vw;
+                overflow: hidden;
+            }
+            /*information_box */
+            .v14_12,
+            .v14_13,
+            .v14_14 {
+                color: rgba(0, 0, 0, 1);
+                position: absolute;
+                font-family: "Roboto";
+                font-weight: Medium;
+                opacity: 1;
+                text-align: left;
+            }
+            .v14_12 {
+                width: 15vw;
+                position: absolute;
+                top: 4vw;
+                left: 3vw;
+                font-size: 1.4vw;
+            }
+            .v14_13 {
+                width: 15vw;
+                top: 2vw;
+                left: 0vw;
+                font-size: 2.4vw;
+            }
+            .v14_14 {
+                width: 15vw;
+                color: rgba(0, 0, 0, 1);
+                position: absolute;
+                top: 5.5vw;
+                left: 0vw;
+                font-size: 1.4vw;
+            }
+
+            .EDUCATION,
+            .LICENSE,
+            .AWARD,
+            .EXPERIENCE,
+            .SKILL {
+                color: rgba(17, 35, 15, 1);
+                position: absolute;
+                font-family: "Roboto";
+                font-weight: bold;
+                font-size: 2.4vw;
+                opacity: 1;
+                text-align: left;
+            }
+            .EDUCATION {
+                top: 24vw;
+                left: 36vw;
+            }
+            .LICENSE {
+                top: 34vw;
+                left: 36vw;
+            }
+            .AWARD {
+                top: 46vw;
+                left: 36vw;
+            }
+            .EXPERIENCE {
+                top: 24vw;
+                left: 62vw;
+            }
+
+            .SKILL {
+                top: 54vw;
+                left: 5vw;
+            }
+
+            .EDUCATION_IN,
+            .LICENSE_IN,
+            .AWARD_IN {
+                width: 18vw;
+                color: rgba(17, 35, 15, 1);
+                position: absolute;
+                font-family: "Roboto";
+                font-weight: Medium;
+                font-size: 1.4vw;
+                opacity: 1;
+                text-align: left;
+            }
+            .EDUCATION_IN {
+                top: 28vw;
+                left: 36vw;
+            }
+            .LICENSE_IN {
+                top: 38vw;
+                left: 36vw;
+            }
+            .AWARD_IN {
+                top: 50vw;
+                left: 36vw;
+            }
+
+            .cont1,
+            .cont2,
+            .cont3,
+            .cont4,
+            .cont5 {
+                width: 32.5vw;
+                color: rgba(0, 0, 0, 1);
+                position: absolute;
+                font-family: "Roboto";
+                font-weight: Medium;
+                font-size: 1.4vw;
+                opacity: 1;
+                text-align: left;
+                left: 62vw;
+            }
+
+            .cont1 {
+                top: 28vw;
+            }
+            .cont2 {
+                top: 34vw;
+            }
+            .cont3 {
+                top: 42vw;
+            }
+            .cont4 {
+                top: 51vw;
+            }
+            .cont5 {
+                top: 60vw;
+            }
+
+            .proj1,
+            .proj2,
+            .proj3,
+            .proj4 {
+                width: 32.5vw;
+                color: red;
+                position: absolute;
+                font-family: "Roboto";
+                font-weight: bold;
+                font-size: 1.2vw;
+                font-style: italic;
+                opacity: 1;
+                text-align: left;
+                left: 63vw;
+            }
+            .proj1 {
+                top: 45vw;
+            }
+            .proj2 {
+                top: 56vw;
+            }
+            .proj3 {
+                top: 65vw;
+            }
+            .proj4 {
+                top: 67vw;
+            }
+            .d_2019,
+            .d_2022,
+            .d_2023,
+            .d_2025 {
+                width: 65px;
+                color: rgba(0, 0, 0, 1);
+                position: absolute;
+                left: 55vw;
+                font-family: "Roboto";
+                font-weight: bold;
+                font-size: 1.2vw;
+                opacity: 1;
+                text-align: left;
+            }
+            .d_2019 {
+                top: 28.4vw;
+            }
+            .d_2022 {
+                top: 34.4vw;
+            }
+            .d_2023 {
+                top: 42.4vw;
+            }
+            .d_2025 {
+                top: 60.4vw;
+            }
+            .v26_41,
+            .v26_53,
+            .v26_54,
+            .v28_12,
+            .v28_13 {
+                width: 1vw;
+                height: 1vw;
+                background: rgba(17, 35, 15, 1);
+                opacity: 1;
+                position: absolute;
+                left: 59vw;
+                border-radius: 50%;
+            }
+
+            .v26_41 {
+                top: 28.5vw;
+            }
+            .v26_53 {
+                top: 34.5vw;
+            }
+            .v26_54 {
+                top: 42.5vw;
+            }
+            .v28_12 {
+                top: 51.5vw;
+            }
+            .v28_13 {
+                top: 60.5vw;
+            }
+            /* 추가된 선 스타일 */
+            .timeline-line {
+                width: 0.3vw;
+                height: 44vw; /* 점의 마지막 위치까지 길이를 조정 */
+                background: rgb(180, 153, 153);
+                position: absolute;
+                left: 59.35vw; /* 점의 x축 위치에 맞춤 */
+                top: 28.5vw; /* 첫 점의 y축 위치와 동일 */
+                z-index: 0; /* 점보다 위로 배치 */
+            }
+            #header-placeholder {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 100;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="background">
+            <div class="sohye_img"></div>
+            <div class="circle_sohye"></div>
+
+            <div class="information_box">
+                <span class="v14_12"
+                    >PARK SO HYE
+                    <span class="v14_13">박 소 혜 </span>
+                    <span class="v14_14">2000. 07. 02</span>
+                </span>
+            </div>
+
+            <span class="EDUCATION">EDUCATION</span>
+            <span class="EDUCATION_IN">충남대학교 화학과 전공</span>
+            <span class="LICENSE">LICENSE </span>
+            <span class="LICENSE_IN"
+                >정보처리기사<br />
+                빅데이터분석기사
+            </span>
+            <span class="AWARD">AWARD</span>
+            <span class="AWARD_IN">한남대 산학협력단장상</span>
+            <span class="EXPERIENCE">EXPERIENCE & PROJECT</span
+            ><span class="cont1">충남대학교 화학과 입학</span
+            ><span class="cont2"
+                >인공지능을 위한 위셋 교육 (06. 27 - 07. 15)<br />
+                - R, PYTHON, MACHINE LEARNING</span
+            ><span class="cont3"
+                >한국선박플랜트연구소(KRISO) 인턴 (03. 02 - 06. 19) </span
+            ><span class="cont5"
+                >클라우드기반 백엔드 풀스택 웹서비스 개발(AWS, 큐레이팅) (24.
+                12. 31 - 25. 06. 10) </span
+            ><span class="cont4"
+                >데이터 청년 캠퍼스(06. 26 - 09. 27) -스마트시티 AI·빅데이터
+                활용 고도화 과정 <한국데이터산업진흥원> </span
+            ><span class="proj1"
+                >한국해양과학기술협의회 공동학술대회 참여 (해양환경 조사 · 정보
+                현황과 활용 시사점 부문 ) </span
+            ><span class="proj2">스마트스타디움 주차서비스 구축 프로젝트</span
+            ><span class="proj3"
+                >소비자 선호도 기반 F&B 큐레이팅 커머스 웹 프로젝트</span
+            ><span class="proj4"
+                >사용자 라이프스타일 영상 큐레이션 서비스 프로젝트</span
+            ><span class="d_2019">2019</span><span class="d_2022">2022</span
+            ><span class="d_2023">2023</span><span class="d_2025">2025</span>
+            <span class="about_ME">about ME.</span>
+
+            <span class="SKILL">SKILL</span>
+            <div class="timeline-line"></div>
+            <div class="v26_41"></div>
+            <div class="v26_53"></div>
+            <div class="v26_54"></div>
+            <div class="v28_12"></div>
+            <div class="v28_13"></div>
+            <div class="v122_278"></div>
+        </div>
+        <div id="header-placeholder"></div>
+
+        <script>
+            // 헤더 로드 후 active 클래스 추가 코드 실행
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-placeholder").innerHTML =
+                        data;
+
+                    // 헤더 로드 완료 후 현재 페이지에 따라 active 클래스 설정
+                    const currentPage = window.location.pathname
+                        .split("/")
+                        .pop();
+
+                    const links = {
+                        "home.html": "home-link",
+                        "about_me.html": "about-me-link",
+                        "main_project.html": "project-link",
+                        "contact.html": "contact-link",
+                    };
+
+                    // 현재 페이지와 일치하는 링크에 active 클래스 추가
+                    for (let page in links) {
+                        const link = document.getElementById(links[page]);
+                        if (link && currentPage === page) {
+                            link.classList.add("active");
+                        }
+                    }
+                });
+        </script>
+        <!-- <script>
+            // 페이지 전환을 막기 위한 플래그
+            let isTransitioning = false;
+
+            // 스크롤 이벤트 감지
+            window.addEventListener("scroll", () => {
+                if (isTransitioning) return; // 이미 전환 중이면 실행하지 않음
+
+                const scrollTop = window.scrollY || document.documentElement.scrollTop; // 현재 스크롤 위치
+                const windowHeight = window.innerHeight; // 창 높이
+                const documentHeight = document.documentElement.scrollHeight; // 문서 전체 높이
+
+                // 스크롤이 문서의 90% 이상 도달했는지 확인
+                const scrollPercentage = (scrollTop + windowHeight) / documentHeight;
+
+                if (scrollPercentage >= 0.9) {
+                    isTransitioning = true; // 페이지 전환 방지 플래그 설정
+                    setTimeout(() => {
+                        window.location.href = "main_project.html"; // 페이지 전환
+                    }, 500); // 0.5초 후 전환 (사용자 경험 개선)
+                }
+            });
+        </script>  -->
+    </body>
+</html>

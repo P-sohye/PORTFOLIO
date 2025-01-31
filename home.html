@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+    <head>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+            rel="stylesheet" />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,900&display=swap"
+            rel="stylesheet" />
+        <title>HOME</title>
+
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-size: 1.4vw; /* 화면 너비에 따라 글씨 크기 조정 */
+                font-family: "Roboto";
+                scroll-behavior: smooth;
+            }
+            .background {
+                width: 100%;
+                height: 100vh; /* 뷰포트 높이에 맞춤 */
+                background: rgba(247, 243, 239, 1);
+                position: absolute;
+                overflow-x: hidden; /* 양옆 스크롤 제거 */
+                overflow-y: auto; /* 세로 스크롤 허용 */
+            }
+
+            .banner {
+                width: 100%;
+                height: 30vw;
+                background: rgba(217, 217, 217, 0.44);
+                position: absolute;
+                top: 2vw;
+                display: flex;
+                justify-content: center; /* 가로 중앙 정렬 */
+                align-items: center; /* 세로 중앙 정렬 */
+            }
+
+            .sohye1 {
+                width: 100%;
+                color: black;
+                position: absolute;
+                top: 9.8vw;
+                left: 0;
+                font-family: "roboto";
+                font-weight: bolder;
+                font-size: 14vw;
+                text-align: center;
+            }
+            /* .port {
+                width: 17vw;
+                color: rgba(0, 0, 0, 1);
+                position: absolute;
+                top: 80vw;
+                right: 5vw;
+                font-size: 3vw;
+                text-align: right;
+            } */
+
+            .img_box {
+                width: 20vw; /* 화면 너비 기준 크기 설정 */
+                height: 37vw;
+                background: rgb(180, 153, 153);
+                position: absolute;
+                top: 40vw;
+                left: 5vw;
+            }
+            /*
+
+            .v191_84 {
+                width: 18vw;
+                height: 25vw;
+                background: url(images/sohye3.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                position: absolute;
+                top: 45vw;
+                left: 7vw;
+            } */
+
+            .explain1 {
+                width: 50vw;
+                color: rgba(17, 35, 15, 1);
+                position: absolute;
+                top: 40vw;
+                left: 30vw;
+                font-family: "Roboto";
+                font-size: 2.4vw;
+                font-weight: bold;
+            }
+            .skill_box1,
+            .skill_box2,
+            .skill_box3 {
+                width: 12vw;
+                height: 2.5vw;
+                background: #d9d9d9;
+                position: absolute;
+                border-radius: 98px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .skill_box1 {
+                top: 64vw;
+                left: 30vw;
+            }
+
+            .skill_box2 {
+                top: 68vw;
+                left: 30vw;
+            }
+
+            .skill_box3 {
+                top: 72vw;
+                left: 30vw;
+            }
+
+            .skill_1,
+            .skill_2,
+            .skill_3 {
+                width: 12vw;
+                color: rgba(0, 0, 0, 1);
+                position: absolute;
+                font-family: "roboto";
+                font-size: 1.4vw;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .skill_1 {
+                top: 64.3vw;
+                left: 30vw;
+            }
+            .skill_2 {
+                top: 68.3vw;
+                left: 30vw;
+            }
+            .skill_3 {
+                top: 72.3vw;
+                left: 30vw;
+            }
+
+            .skill_explain1 {
+                width: 50vw;
+                color: rgba(17, 35, 15, 1);
+                position: absolute;
+                top: 64vw;
+                left: 45vw;
+                font-family: "Roboto";
+                font-size: 1.4vw;
+            }
+
+            .skill_explain2 {
+                width: 50vw;
+                color: rgba(17, 35, 15, 1);
+                position: absolute;
+                top: 68vw;
+                left: 45vw;
+                font-family: "Roboto";
+                font-size: 1.4vw;
+            }
+
+            .sohye2 {
+                width: 100%;
+                color: rgba(17, 35, 15, 1);
+                position: absolute;
+                top: 80vw;
+                left: 5vw;
+                font-family: "Roboto";
+                font-weight: bold;
+                font-size: 5vw;
+            }
+
+            .information {
+                width: 100%;
+                height: 5vw;
+                color: rgba(17, 35, 15, 1);
+                position: absolute;
+                top: 87vw;
+                left: 5vw;
+                font-family: "Roboto";
+                font-weight: bold;
+                font-size: 1.4vw;
+            }
+
+            /* .v191_111 {
+                width: 17vw;
+                height: 24vw;
+                background: url("../images/v191_111.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                position: absolute;
+                top: 45vw;
+                left: 8vw;
+            } */
+
+            #header-placeholder {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 100;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="background">
+            <div class="img_box"></div>
+            <div class="v191_84"><div class="name"></div></div>
+            <div class="banner"></div>
+            <span class="skill_explain1"
+                >자기소개는 개발 가치관 혹은 개발 방향을 소신껏
+                적어주세요.</span
+            ><span class="skill_explain2"
+                >나의 성격, 장점 등을 한 줄로 나타낼 수 있는 문구를 만들어
+                보세요 나를 표현 하는 한문장</span
+            ><span class="sohye2">PARK SO HYE</span
+            ><span class="sohye1">PARK SO HYE</span
+            ><span class="information"
+                >TEL. 010 - 6320 - 6487 | E-MAIL. thgp1254@gmail.com | ADDRESS.
+                서울특별시 은평구</span
+            >
+            <div class="skill_box1"></div>
+            <div class="skill_box2"></div>
+            <div class="skill_box3"></div>
+            <span class="skill_1"># skills</span
+            ><span class="skill_2"># skills</span
+            ><span class="skill_3"># skills</span><span class="port"></span>
+            <div class="v191_111"></div>
+            <span class="explain1"
+                >예시)스프링 프레임 워크를 활용하여 높은 수준의 개요에 대한
+                강력한 시놉십스를 제공한 경험이 있습니다.기업 전략에 대한
+                반복적인 접근 방식은 전체적인 가치 제안을 추진하기 위한 협업적
+                사고를 촉진합니다.</span
+            >
+        </div>
+        <div id="header-placeholder"></div>
+
+        <script>
+            // 헤더 로드 후 active 클래스 추가 코드 실행
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-placeholder").innerHTML =
+                        data;
+
+                    // 헤더 로드 완료 후 현재 페이지에 따라 active 클래스 설정
+                    const currentPage = window.location.pathname
+                        .split("/")
+                        .pop();
+
+                    const links = {
+                        "home.html": "home-link",
+                        "about_me.html": "about-me-link",
+                        "main_project.html": "project-link",
+                        "contact.html": "contact-link",
+                    };
+
+                    // 현재 페이지와 일치하는 링크에 active 클래스 추가
+                    for (let page in links) {
+                        const link = document.getElementById(links[page]);
+                        if (link && currentPage === page) {
+                            link.classList.add("active");
+                        }
+                    }
+                });
+        </script>
+
+        <!-- <script>
+            // 페이지 전환을 막기 위한 플래그
+            let isTransitioning = false;
+
+            // 스크롤 이벤트 감지
+            window.addEventListener("scroll", () => {
+                if (isTransitioning) return; // 이미 전환 중이면 실행하지 않음
+
+                const scrollTop =
+                    window.scrollY || document.documentElement.scrollTop; // 현재 스크롤 위치
+                const windowHeight = window.innerHeight; // 창 높이
+                const documentHeight = document.documentElement.scrollHeight; // 문서 전체 높이
+
+                // 스크롤이 문서의 끝에 도달했는지 확인
+                if (scrollTop + windowHeight >= documentHeight - 10) {
+                    isTransitioning = true; // 전환 중 상태로 설정
+
+                    // 약간의 딜레이 후 페이지 전환 (부드러운 사용자 경험)
+                    setTimeout(() => {
+                        window.location.href = "about_me.html"; // 이동할 페이지
+                    }, 500); // 0.5초 딜레이
+                }
+            });
+        </script> -->
+    </body>
+</html>
